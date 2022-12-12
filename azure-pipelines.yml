@@ -24,7 +24,7 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.DefaultWorkingDirectory)/target/azure-functions/function-app-demo'
+    rootFolderOrFile: '/target/azure-functions/function-app-demo'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
