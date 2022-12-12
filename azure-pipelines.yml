@@ -24,12 +24,12 @@ steps:
 
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '/target/azure-functions/function-app-demo'
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/target/azure-functions/function-app-demo'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-
+    
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
